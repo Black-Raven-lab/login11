@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://preview.colorlib.com/theme/bootstrap/login-form-20/images/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 28px;
+  color: #fff;
+}
+h3 {
+  font-weight: 300;
+  color: #fff;
+  text-align: center !important;
+  line-height: 1.5;
+
+  font-size: 1.75rem;
+}
+
+.container {
+  margin-top: 40px;
+  width: 720px;
+  height: 413px;
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+  width: 330px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.2); /* transparent white */
+  backdrop-filter: blur(5px); /* blur background */
+
+  color: white;
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.one {
+  text-transform: uppercase;
+  background: #fbceb5 !important;
+  width: 330px;
+  height: 50px;
+  border-radius: 40px;
+  border: none;
+  font-size: 15px;
+}
+
+.checkboxletter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Forgot-Password {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  position: relative;
+  left: 20px;
+}
+
+/* ===== CUSTOM SETTINGS ===== */
+:root {
+  --checkbox-size: 20px; /* Change size here */
+  --checkbox-color: #fbceb5 !important; /* Change color here */
+}
+
+/* Container */
+.custom-checkbox {
+  display: flex;
+  color: #fbceb5;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 18px;
+  position: relative;
+  right: 20px;
+}
+
+/* Hide default checkbox */
+.custom-checkbox input {
+  display: none;
+}
+
+/* Custom box (NO BORDER) */
+.checkmark {
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  backdrop-filter: blur(5px);
+  border-radius: 6px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* When checked */
+.custom-checkbox input:checked + .checkmark {
+  background-color: var(--checkbox-color);
+}
+
+/* Check icon */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  width: 25%;
+  height: 50%;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: 0.2s ease;
+}
+
+/* Show check */
+.custom-checkbox input:checked + .checkmark::after {
+  opacity: 1;
+}
+
+.last-text {
+  color: white;
+  margin-top: 10px;
+}
+
+.two-button {
+  display: flex;
+  gap: 05px;
+}
+
+.two {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 161px;
+  height: 47px;
+  font-size: 15px;
+}
